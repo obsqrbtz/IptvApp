@@ -1,24 +1,19 @@
-//
-//  ContentView.swift
-//  IptvApp
-//
-//  Created by Daniel on 03/07/2025.
-//
-
 import SwiftUI
+import IptvFFmpeg
 
 struct ContentView: View {
+    @State private var ffmpegVersion: String = "Loading..."
+
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("FFmpeg Version:")
+                .font(.headline)
+            Text(ffmpegVersion)
+                .font(.subheadline)
+                .padding()
         }
-        .padding()
+        .onAppear {
+            ffmpegVersion = ffmpegVer()
+        }
     }
-}
-
-#Preview {
-    ContentView()
 }

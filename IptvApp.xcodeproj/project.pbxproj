@@ -6,8 +6,28 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		65BA1D8A2E167C99008D0DA6 /* IptvFFmpeg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65BA1D892E167C99008D0DA6 /* IptvFFmpeg.framework */; };
+		65BA1D8B2E167C99008D0DA6 /* IptvFFmpeg.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 65BA1D892E167C99008D0DA6 /* IptvFFmpeg.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		65BA1D8C2E167C99008D0DA6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				65BA1D8B2E167C99008D0DA6 /* IptvFFmpeg.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		65BA1D662E167BED008D0DA6 /* IptvApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IptvApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		65BA1D892E167C99008D0DA6 /* IptvFFmpeg.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IptvFFmpeg.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -23,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65BA1D8A2E167C99008D0DA6 /* IptvFFmpeg.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -33,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				65BA1D682E167BED008D0DA6 /* IptvApp */,
+				65BA1D882E167C99008D0DA6 /* Frameworks */,
 				65BA1D672E167BED008D0DA6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,6 +67,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		65BA1D882E167C99008D0DA6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				65BA1D892E167C99008D0DA6 /* IptvFFmpeg.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -55,6 +85,7 @@
 				65BA1D622E167BED008D0DA6 /* Sources */,
 				65BA1D632E167BED008D0DA6 /* Frameworks */,
 				65BA1D642E167BED008D0DA6 /* Resources */,
+				65BA1D8C2E167C99008D0DA6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -272,10 +303,11 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = "1,2,3";
 				XROS_DEPLOYMENT_TARGET = 2.4;
 			};
 			name = Debug;
@@ -311,10 +343,11 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = "1,2,3";
 				XROS_DEPLOYMENT_TARGET = 2.4;
 			};
 			name = Release;
